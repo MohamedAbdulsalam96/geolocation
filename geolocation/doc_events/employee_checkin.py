@@ -2,7 +2,7 @@ import frappe
 import json
 import requests
 
-def validate(doc, methods=None):
+def validate(doc, methods=None):   #openstreetmap
     if doc.latitude and doc.longitude and not doc.custom_location:
         url = "https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lon}&format=json".format(
             lat = doc.latitude,
